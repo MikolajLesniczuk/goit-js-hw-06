@@ -1,3 +1,4 @@
+'use strict'
 const Input = document.querySelector('#name-input')
 const Output = document.querySelector('#name-output')
 

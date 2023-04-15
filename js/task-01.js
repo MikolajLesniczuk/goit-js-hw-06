@@ -1,3 +1,4 @@
+'use strict'
 const lists = document.querySelectorAll('.item ul')
 const item = document.querySelectorAll('.item')
 const title = document.querySelectorAll('.item h2')

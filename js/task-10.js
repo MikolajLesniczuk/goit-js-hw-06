@@ -1,3 +1,4 @@
+'use strict'
 const boxes = document.querySelector('#boxes');
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");

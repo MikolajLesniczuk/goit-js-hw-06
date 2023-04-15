@@ -1,3 +1,4 @@
+'use strict'
 const SizeControl = document.querySelector('#font-size-control')
 const Text = document.querySelector('#text')
 

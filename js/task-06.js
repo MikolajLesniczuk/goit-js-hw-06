@@ -1,3 +1,4 @@
+'use strict'
 const Input = document.querySelector('#validation-input')
 const PasswordLength = Number.parseInt(Input.dataset.length)
 

@@ -1,3 +1,4 @@
+'use strict'
 const textColor = document.querySelector('.color');
 const changeButton = document.querySelector('.change-color'); 
 const Body = document.querySelector('body');

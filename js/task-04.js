@@ -1,4 +1,4 @@
-
+'use strict'
 let counterValue = 0 ;
 const Decrement = document.querySelector('[data-action="decrement"]')  
 const Increment = document.querySelector('[data-action="increment"]')  
