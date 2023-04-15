@@ -1,5 +1,62 @@
+const boxes = document.querySelector('#boxes');
+const btnCreate = document.querySelector("button[data-create]");
+const btnDestroy = document.querySelector("button[data-destroy]");
+const Input = document.querySelector('#controls input');
+
+
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+      return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, 0)}`;
+    }
+
+const createBoxes = (amount) => {
+let divSize = 30;
+amount = Input.value
+
+for(let i=0 ; i < amount ; i++){
+const newBox = document.createElement('div');
+newBox.style.width = `${divSize}px`;
+newBox.style.height = `${divSize}px`;
+newBox.style.backgroundColor = getRandomHexColor();
+boxes.append(newBox);
+divSize += 10;
 }
+
+Input.value = null
+
+}
+
+const destroyBoxes = () => boxes.innerHTML=""
+
+btnCreate.addEventListener('click',createBoxes)
+btnDestroy.addEventListener('click',destroyBoxes)
+
+
+// 
+
+
+// Napisz skrypt tworzenia i usuwania kolekcji elementów. Użytkownik wprowadza liczbę elementów do input i naciska przycisk Utwórz, co rozpoczyna tworzenie się kolekcji. Po naciśnięciu przycisku Usuń, kolekcja elementów zostaje usunięta.
+
+// <div id="controls">
+//   <input type="number" min="1" max="100" step="1" />
+//   <button type="button" data-create>Create</button>
+//   <button type="button" data-destroy>Destroy</button>
+// </div>
+
+// <div id="boxes"></div>
+
+
+// Utwórz funkcję createBoxes(amount), która przyjmuje jeden parametr - liczbę. Funkcja tworzy tyle elementów <div>, ile wybrano w amount i dodaje je do div#boxes.
+
+// Wymiary pierwszego <div> - 30px na 30px.
+// Każdy następny element powinien być szerszy i wyższy od poprzedniego o 10px.
+// Wszystkie elementy powinny mieć losowy kolor tła w formacie NEX. Użyj gotowej funkcji getRandomHexColor aby otrzymać kolor.
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
+
+
+// Utwórz funkcję destroyBoxes(), która usuwa zawartość div#boxes, tym samym usuwając wszystkie utworzone elementy.
