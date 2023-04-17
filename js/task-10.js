@@ -12,8 +12,12 @@ function getRandomHexColor() {
     }
 
 const createBoxes = (amount) => {
+  
 let divSize = 30;
-amount = Input.value
+  amount = Input.value
+  if (amount > 100) {
+    amount = 100
+  }
 
 for(let i=0 ; i < amount ; i++){
 const newBox = document.createElement('div');
@@ -30,7 +34,7 @@ Input.value = null
 
 const destroyBoxes = () => boxes.innerHTML=""
 
-btnCreate.addEventListener('click',createBoxes)
+btnCreate.addEventListener('click',() => createBoxes(Input.value))
 btnDestroy.addEventListener('click',destroyBoxes)
 
 

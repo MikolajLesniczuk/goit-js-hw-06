@@ -9,15 +9,15 @@ const ingredients = [
 ];
 
 const ingredient = document.querySelector('#ingredients')
-
+const newlist = [] 
 for(let item of ingredients){
   const list = document.createElement('li')
   list.textContent = item;
 list.classList.add('item');
-ingredient.append(list)
-
+newlist.push(list)
 }
 
+ingredient.append(...newlist)
 
 // W HTML znajduje się pusta lista ul#ingredients.
 
